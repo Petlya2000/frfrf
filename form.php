@@ -1,7 +1,7 @@
 <?php
  
     // Connect to database 
-    $con = mysqli_connect("localhost","root","","example_store");
+    $con = mysqli_connect("localhost","crud_user","q1w2e3","primer");
      
     // mysqli_connect("servername","username","password","database_name")
   
