@@ -19,13 +19,13 @@
         // Store the Category ID in a "id" variable
         $id = mysqli_real_escape_string($con,$_POST['Category']); 
         
-        $ID = mysqli_real_escape_string($con,$_POST['Type']); 
+        $cd = mysqli_real_escape_string($con,$_POST['Type']); 
 
         // Creating an insert query using SQL syntax and
         // storing it in a variable.
         $sql_insert = 
         "INSERT INTO `product`(`product_name`, `category_id`,`type_id`)
-            VALUES ('$name','$id','$ID')";
+            VALUES ('$name','$id','$cd')";
           
           // The following code attempts to execute the SQL query
           // if the query executes with no errors 
