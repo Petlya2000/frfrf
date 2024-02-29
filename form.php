@@ -19,13 +19,13 @@
         // Store the Category ID in a "id" variable
         $id = mysqli_real_escape_string($con,$_POST['Category']); 
         
-        $id1 = mysqli_real_escape_string($con,$_POST['Type']); 
+        $type = mysqli_real_escape_string($con,$_POST['Type']); 
 
         // Creating an insert query using SQL syntax and
         // storing it in a variable.
         $sql_insert = 
-        "INSERT INTO `product`(`product_name`, `category_id`)
-            VALUES ('$name','$id')";
+        "INSERT INTO `product`(`product_name`, `category_id`,`type_id`)
+            VALUES ('$name','$id',`$type`)";
           
           // The following code attempts to execute the SQL query
           // if the query executes with no errors 
@@ -64,6 +64,27 @@
                     // The value we usually set is the primary key
                 ?>">
                     <?php echo $category["Category_Name"];
+                        // To show the category name to the user
+                    ?>
+                </option>
+            <?php 
+                endwhile; 
+                // While loop must be terminated
+            ?>
+        </select>
+        <br>
+<select name="Type">
+            <?php 
+                // use a while loop to fetch data 
+                // from the $all_categories variable 
+                // and individually display as an option
+                while ($type = mysqli_fetch_array(
+                        $all_types,MYSQLI_ASSOC)):; 
+            ?>
+                <option value="<?php echo $type["Type_ID"];
+                    // The value we usually set is the primary key
+                ?>">
+                    <?php echo $type["Type_Name"];
                         // To show the category name to the user
                     ?>
                 </option>
