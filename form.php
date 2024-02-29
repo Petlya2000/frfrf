@@ -1,7 +1,7 @@
 <?php
  
     // Connect to database 
-    $con = mysqli_connect("localhost","root","","example_store");
+    $con = mysqli_connect("localhost","crud_user","q1w2e3","primer");
      
     // mysqli_connect("servername","username","password","database_name")
   
@@ -24,8 +24,8 @@
         // Creating an insert query using SQL syntax and
         // storing it in a variable.
         $sql_insert = 
-        "INSERT INTO `product`(`product_name`, `category_id`,`type_id`)
-            VALUES ('$name','$id','$id')";
+        "INSERT INTO `product`(`product_name`, `category_id`)
+            VALUES ('$name','$id')";
           
           // The following code attempts to execute the SQL query
           // if the query executes with no errors 
@@ -73,28 +73,6 @@
             ?>
         </select>
         <br>
-
-        <select name="Type">
-            <?php 
-                // use a while loop to fetch data 
-                // from the $all_categories variable 
-                // and individually display as an option
-                while ($type = mysqli_fetch_array(
-                        $all_types,MYSQLI_ASSOC)):; 
-            ?>
-                <option value="<?php echo $type["Type_ID"];
-                    // The value we usually set is the primary key
-                ?>">
-                    <?php echo $category["Type_Name"];
-                        // To show the category name to the user
-                    ?>
-                </option>
-            <?php 
-                endwhile; 
-                // While loop must be terminated
-            ?>
-        </select>
-
 	<br>
         <input type="submit" value="submit" name="submit">
     </form>
