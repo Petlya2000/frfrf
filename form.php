@@ -17,7 +17,10 @@
     {
         // Store the Product name in a "name" variable
         $name = mysqli_real_escape_string($con,$_POST['Product_name']);
-        
+         // Store the Product fam in a "fam" variable
+        $fam = mysqli_real_escape_string($con,$_POST['Product_fam']);
+      // Store the Product otch in a "otch" variable
+        $otch = mysqli_real_escape_string($con,$_POST['Product_otch']);
         // Store the Category ID in a "id" variable
         $id = mysqli_real_escape_string($con,$_POST['Category']); 
         
@@ -26,8 +29,8 @@
         // Creating an insert query using SQL syntax and
         // storing it in a variable.
         $sql_insert = 
-        "INSERT INTO `product`(`product_name`, `category_id`,`type_id`)
-            VALUES ('$name','$id','$id1')";
+        "INSERT INTO `product`(`product_name`, `product_fam`,`product_otch`,`category_id`,`type_id`)
+            VALUES ('$name','$fam','$otch','$id','$id1')";
           
           // The following code attempts to execute the SQL query
           // if the query executes with no errors 
@@ -39,7 +42,6 @@
         }
     }
 ?>
-  
   
 <!DOCTYPE html>
 <html lang="en">
@@ -53,6 +55,10 @@
     <form method="POST">
         <label>Name of Product:</label>
         <input type="text" name="Product_name" required><br>
+        <label>Fam of Product:</label>
+        <input type="text" name="Product_fam" required><br>
+        <label>Otch of Product:</label>
+        <input type="text" name="Product_otch" required><br>
         <label>Select a Category</label>
         <select name="Category">
             <?php 
