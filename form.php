@@ -1,7 +1,6 @@
 <?php
  
-    // Connect to database 
-    $con = mysqli_connect("localhost","crud_user","q1w2e3","primer");
+    require_once 'conn.php';
      
     // mysqli_connect("servername","username","password","database_name")
   
@@ -15,19 +14,22 @@
     // and inserts the data in the database accordingly
     if(isset($_POST['submit']))
     {
+     if(isset($_POST['q1')){
+      
         // Store the Product name in a "name" variable
         $name = mysqli_real_escape_string($con,$_POST['Product_name']);
          // Store the Product fam in a "fam" variable
+       $fam = mysqli_real_escape_string($con,$_POST['Product_fam']);
         // Store the Category ID in a "id" variable
         $id = mysqli_real_escape_string($con,$_POST['Category']); 
         
         $id1 = mysqli_real_escape_string($con,$_POST['Type']); 
-
+        $q1=$_POST['q1'];
         // Creating an insert query using SQL syntax and
         // storing it in a variable.
         $sql_insert = 
-        "INSERT INTO `product`(`product_name`, `category_id`,`type_id`)
-            VALUES ('$name','$id','$id1')";
+        "INSERT INTO `product`(`product_name`,`product_fam`,`living`, `category_id`,`type_id`)
+            VALUES ('$name','$fam','$q1','$id','$id1')";
           
           // The following code attempts to execute the SQL query
           // if the query executes with no errors 
@@ -37,6 +39,7 @@
         {
             echo '<script>alert("Product added successfully")</script>';
         }
+     }
     }
 ?>
   
@@ -52,6 +55,8 @@
     <form method="POST">
         <label>Name of Product:</label>
         <input type="text" name="Product_name" required><br>
+     <label>Fam of Product:</label>
+        <input type="text" name="Product_fam" required><br>
          <label>Select a Category</label>
         <select name="Category">
             <?php 
@@ -96,6 +101,11 @@
             ?>
         </select>
         <br>
+     <label>Status</label>
+       <br>
+     <input type="radio" name="q1" value="0"> Bad<br>
+     <input type="radio" name="q1" value="1"> Good<br>
+      <br>
         <input type="submit" value="submit" name="submit">
     </form>
     <br>
