@@ -109,5 +109,8 @@
         <input type="submit" value="submit" name="submit">
     </form>
     <br>
+ <form method="post" action="alldata.php">
+<input id="submitover" type="submit" value="Показать всех"><b/>
+</form>
 </body>
 </html>
