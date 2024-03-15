@@ -19,11 +19,10 @@
                 <div class="table-responsive">  
                      <table class="table table-striped">  
                           <tr>  
-                               <th> Name</th>  
+                              <th> ID</th>
+                              <th> Name</th>  
                                <th>Fam</th>  
-                            <th>Type</th>  
-                               <th>Category</th>  
-                          </tr>  
+                           </tr>  
                           <?php  
                           if(mysqli_num_rows($result) > 0)  
                           {  
@@ -31,10 +30,9 @@
                                {  
                           ?>  
                           <tr>  
+                                   <td><?php echo $row["product_ID"];?></td>  
                                <td><?php echo $row["product_name"];?></td>  
                                <td><?php echo $row["product_fam"]; ?></td>
-                            <td><?php echo $row["Type_Name"];?></td>  
-                               <td><?php echo $row["Category_Name"]; ?></td>  
                           </tr>  
                           <?php  
                                }  
