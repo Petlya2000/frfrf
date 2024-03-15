@@ -48,9 +48,15 @@
 </form>
     <br/>
     <form method="post" action"read.php">
-    <input id="Nknig" type='text' name='nk' placeholder="Номер книги"><b><b>
+    <input id="Nknig" type='text' name='nk' placeholder="Идентификационный номер"><b><b>
 <br/>
 <input id='submitread'  type='submit' value='Читать...'><b><b>
+</form>
+<br/>
+    <form method="post" action"sortType.php">
+    <input id="Nknig" type='text' name='nk' placeholder="Тип"><b><b>
+<br/>
+<input id='submitread'  type='submit' value='Поиск по типу'><b><b>
 </form>
 </body>
 </html>
