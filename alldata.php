@@ -56,7 +56,14 @@
     <form method="post" action"sortType.php">
     <input id="Nknig" type='text' name='nk' placeholder="Тип"><b><b>
 <br/>
-<input id='submitread'  type='submit' value='Поиск по типу'><b><b>
+<input id='submitavtr'  type='submit' value='Поиск по типу'><b><b>
 </form>
+<br/>
+<form method='post' action='sortCategory.php'><b>
+<input id="Nknig" type='text' name='nk' placeholder="Категория"><b><b>
+<br>
+<input id='submittitle'  type='submit' value='Поиск но категории'><b><b>
+</form>
+<br/>
 </body>
 </html>
