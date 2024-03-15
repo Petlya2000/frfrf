@@ -14,7 +14,7 @@
     // and inserts the data in the database accordingly
     if(isset($_POST['submit']))
     {
-     if(isset($_POST['q1')){
+     if(isset($_POST['q1'])){
       
         // Store the Product name in a "name" variable
         $name = mysqli_real_escape_string($con,$_POST['Product_name']);
