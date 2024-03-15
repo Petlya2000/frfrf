@@ -49,7 +49,7 @@
     <br/>
     <form method="post" action"read.php">
     <input id="Nknig" type='text' name='nk' placeholder="Номер книги"><b><b>
-<br>
+<br/>
 <input id='submitread'  type='submit' value='Читать...'><b><b>
 </form>
 </body>
