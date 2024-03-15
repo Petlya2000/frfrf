@@ -46,6 +46,8 @@
 <br>
   <input id="submitback" type="submit" value="Добавить запись">
 </form>
+    <br/>
+    <form method="post" action"read.php">
     <input id="Nknig" type='text' name='nk' placeholder="Номер книги"><b><b>
 <br>
 <input id='submitread'  type='submit' value='Читать...'><b><b>
