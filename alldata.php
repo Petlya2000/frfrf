@@ -64,5 +64,11 @@
 <input id='submittitle'  type='submit' value='Поиск но категории'><b><b>
 </form>
 <br/>
+    <form method='post' action='delete.php'><br/>
+<input id="Nknig" type='text' name='nk' placeholder="Номер книги"><b><b>
+<br>
+<input id='submitdelete'  type='submit' value='Delete'><b><b>
+</form>
+    <br/>
 </body>
 </html>
