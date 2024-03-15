@@ -44,7 +44,11 @@
            <br /> 
                             <form method="post" action="form.php">
 <br>
-  <input id="submitback" type="submit" value="На главную">
+  <input id="submitback" type="submit" value="Добавить запись">
+</form>
+    <input id="Nknig" type='text' name='nk' placeholder="Номер книги"><b><b>
+<br>
+<input id='submitread'  type='submit' value='Читать...'><b><b>
 </form>
 </body>
 </html>
