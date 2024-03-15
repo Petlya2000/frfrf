@@ -29,7 +29,7 @@
                                {  
                           ?>  
                           <tr>  
-                                   <td><?php echo $row["product_ID"];?></td>  
+                                   <td><?php echo $row["Product_ID"];?></td>  
                                <td><?php echo $row["product_name"];?></td>  
                                <td><?php echo $row["product_fam"]; ?></td>
                           </tr>  
@@ -46,13 +46,13 @@
   <input id="submitback" type="submit" value="Добавить запись">
 </form>
     <br/>
-    <form method="post" action"read.php">
+    <form method="post" action="read.php">
     <input id="Nknig" type="text" name="nk" placeholder="ID"><b><b>
 <br/>
 <input id="submitread"  type="submit" value="Читать..."><b><b>
 </form>
 <br/>
-    <form method="post" action"sortType.php">
+    <form method="post" action="sortType.php">
     <input id="Nknig" type="text" name="nk" placeholder="Тип"><b><b>
 <br/>
 <input id="submitavtr"  type="submit" value="Поиск по типу"><b><b>
