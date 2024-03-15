@@ -2,7 +2,7 @@
     require_once 'conn.php';
 $id = $_REQUEST['nk'];
 if (!($id)) {
-  echo("Введите номер книги");
+  echo("Введите номер данных");
 }
 else {
    $sql_select="SELECT * FROM product INNER JOIN type ON product.type_id = type.type_id INNER JOIN category ON product.category_id = category.category_id WHERE product.Product_ID='$id';"
@@ -37,11 +37,11 @@ else {
                                {  
                           ?>  
                           <tr>  
-                                   <td><?php echo $row["product_ID"];?></td>  
+                                   <td><?php echo $row["Product_ID"];?></td>  
                                <td><?php echo $row["product_name"];?></td>  
                                <td><?php echo $row["product_fam"]; ?></td>
-                            <td><?php echo $row["type_name"];?></td>  
-                               <td><?php echo $row["category_name"]; ?></td>
+                            <td><?php echo $row["Type_Name"];?></td>  
+                               <td><?php echo $row["Category_Name"]; ?></td>
                           </tr>  
                           <?php  
                                }  
