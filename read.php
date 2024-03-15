@@ -5,7 +5,7 @@ if (!($id)) {
   echo("Введите номер данных");
 }
 else {
-   $sql_select="SELECT * FROM product INNER JOIN type ON product.type_id = type.type_id INNER JOIN category ON product.category_id = category.category_id WHERE product.Product_ID='$id';"
+   $sql_select="SELECT * FROM product INNER JOIN type ON product.type_id = type.type_id INNER JOIN category ON product.category_id = category.category_id WHERE product.Product_ID='$id';";
   $result=mysqli_query($con,$sql_select);
 ?>
   
