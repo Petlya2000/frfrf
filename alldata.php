@@ -1,6 +1,6 @@
 <?php
     require_once 'conn.php';
-   $sql_select="SELECT * FROM product INNER JOIN type ON product.type_id = type.type_id INNER JOIN category ON product.category_id = category.category_id;"
+   $sql_select="SELECT * FROM product INNER JOIN type ON product.type_id = type.type_id INNER JOIN category ON product.category_id = category.category_id;";
   $result=mysqli_query($con,$sql_select);
 ?>
   
